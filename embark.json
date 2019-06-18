@@ -1,0 +1,29 @@
+{
+  "contracts": [
+    "contracts/**"
+  ],
+  "app": {},
+  "buildDir": "dist/",
+  "config": "config/",
+  "versions": {
+    "web3": "1.0.0-beta",
+    "solc": "0.5.0",
+    "ipfs-api": "17.2.4"
+  },
+  "plugins": {
+    "embarkjs-connector-web3": {},
+    "embark-plasma": {
+      "WATCHER_URL": "http://watcher.samrong.omg.network/",
+      "CHILDCHAIN_URL": "http://samrong.omg.network/",
+      "CHILDCHAIN_EXPLORER_URL": "http://quest.samrong.omg.network/",
+      "PLASMA_CONTRACT_ADDRESS": "0x740ecec4c0ee99c285945de8b44e9f5bfb71eea7"
+    }
+  },
+  "options": {
+    "solc": {
+      "optimize": true,
+      "optimize-runs": 200
+    }
+  },
+  "generationDir": "src/embarkArtifacts"
+}

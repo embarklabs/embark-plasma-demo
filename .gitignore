@@ -1,0 +1,19 @@
+.DS_Store
+chains.json
+node_modules/
+config/livenet/password
+config/production/password
+coverage
+dist/
+embarkArtifacts
+src/embarkArtifacts
+npm-debug.log
+yarn-error.log
+.embark
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

@@ -1,0 +1,76 @@
+{
+  "name": "embark-plasma-demo",
+  "description": "OMG JS Starter kit in Vue.js using the Embark-Plasma plugin",
+  "version": "1.0.1",
+  "author": "Eric Mastro <eric.mastro@gmail.com>",
+  "homepage": "https://github.com/embark-framework/embark-plasma-demo/tree/master#readme",
+  "bugs": "https://github.com/embark-framework/embark-plasma-demo/issues",
+  "scripts": {
+    "// dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "// build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "// test": "embark test",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "keywords": [
+    "Ethereum",
+    "Embark",
+    "Plasma"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/embark-framework/embark-plasma-demo.git"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "embark-plasma": "^1.0.1",
+    "vue": "^2.6.10",
+    "vue-material": "^1.0.0-beta-11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "babel-eslint": "^10.0.1",
+    "embarkjs-connector-web3": "^4.1.0-beta.2",
+    "embarkjs-plasma": "^1.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+          "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+          "message": "Unexpected property on console object was called"
+        }
+      ]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
