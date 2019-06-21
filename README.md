@@ -4,34 +4,6 @@ The Embark Plasma Demo is a DApp built using Embark and the [`Embark-Plasma`](ht
 > **PLEASE NOTE**
 > This is completely alpha software and should not be used in a production environment.
 
-## Vue.js project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ## Embark-Plasma Demo Setup
 This is an example client side wallet built in Vue.js which allows you to make interactions with the OMG network from the browser.
 
@@ -62,3 +34,31 @@ From here, you can perform 3 actions:
 3. Exit the funds back to Rootchain: Fill in an address that has funds in the OMG Network and click on OK, your exit period will start. Do note that the exit period will be varied based on the configuration of each `elixir-omg` deployment. After the certain amount of time has passed, you will be able to process the exit and receive your funds back.
 
 NOTE: the current wallet does not offer a way to call `processExit()` yet.
+
+## Vue.js project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

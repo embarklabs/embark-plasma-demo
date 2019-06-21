@@ -53,7 +53,7 @@ module.exports = {
 
     contracts: {
       PlasmaCore: {
-        address: "0x44de0ec539b8c4a4b530c78620fe8320167f2f74",
+        address: "0x740ecec4c0ee99c285945de8b44e9f5bfb71eea7",
         abiDefinition: require("@omisego/omg-js-rootchain/src/contracts/RootChain.json").abi
       }
     }
@@ -75,12 +75,31 @@ module.exports = {
   },
 
   rinkeby: {
+    deployment: {
+      host: "rinkeby.infura.io/v3/INFURA_API_KEY",
+      port: false,
+      type: "rpc",
+      protocol: "https",
+      accounts: [
+        {
+          mnemonic: "MNEMONIC_HERE",
+          addressIndex: "0", // Optional. The index to start getting the address
+          numAddresses: "2", // Optional. The number of addresses to get
+          hdpath: "m/44'/60'/0'/0/", // Optional. HD derivation path
+          balance: "100 ether"
+        }
+      ]
+    },
     contracts: {
       PlasmaCore: {
-        address: "0x44de0ec539b8c4a4b530c78620fe8320167f2f74",
+        address: "0x740ecec4c0ee99c285945de8b44e9f5bfb71eea7",
         abiDefinition: require("@omisego/omg-js-rootchain/src/contracts/RootChain.json").abi
       }
-    }
+    },
+    dappConnection: [
+      "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
+      "https://rinkeby.infura.io/v3/INFURA_API_KEY"
+    ]
   },
 
   // merges with the settings in default
