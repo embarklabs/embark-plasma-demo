@@ -17,7 +17,8 @@ limitations under the License.
   <div id="app">
     <div v-if="hasWeb3">
       <md-toolbar class="md-transparent">
-        <img class="logo md-image" src="./assets/OmiseGO_Logo.svg">
+        <img class="logo md-image" src="./assets/status_logo.png">
+        <img class="logo sink md-image" src="./assets/OmiseGO_Logo.svg">
       </md-toolbar>
       <div class="md-layout md-gutter">
         <md-card class="md-layout-item md-size-25 actions">
@@ -86,7 +87,7 @@ limitations under the License.
           <md-table-toolbar>
             <span class="md-title">Transaction History</span>
           </md-table-toolbar>
-          <div v-if="transactions.length">
+          <div v-if="transactions.length" class="transactions-container">
             <md-table-row>
               <md-table-head class="date">Date</md-table-head>
               <md-table-head class="hash">Tx Hash</md-table-head>
@@ -266,6 +267,10 @@ img.logo {
   margin: 20px 0 20px 20px;
 }
 
+img.logo.sink {
+  margin-bottom: 0;
+}
+
 .md-card-header-text > .md-title {
   font-weight: 900;
 }
@@ -333,5 +338,8 @@ th.hash,
 td.hash {
   width: 380px;
   word-break: break-all;
+}
+.transactions-container {
+  max-height: 450px;
 }
 </style>
