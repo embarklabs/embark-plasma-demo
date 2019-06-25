@@ -1,4 +1,4 @@
 /src/embarkArtifacts/*
-embark/packages
+embark/packages/*
 embarkjs-plasma
 embark-plasma
