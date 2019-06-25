@@ -2,3 +2,4 @@
 embark/packages/*
 embarkjs-plasma
 embark-plasma
+/node_modules/*
