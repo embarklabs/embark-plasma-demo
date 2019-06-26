@@ -15,7 +15,7 @@ limitations under the License.
  -->
 <template>
   <div id="app">
-    <div v-if="hasWeb3">
+    <div v-if="inited">
       <md-toolbar class="md-transparent">
         <img class="logo md-image" src="./assets/status_logo.png">
         <img class="logo sink md-image" src="./assets/OmiseGO_Logo.svg">
@@ -153,7 +153,7 @@ limitations under the License.
       />
     </div>
     <div v-else class="load-wallet">
-      <h2>Enable MetaMask to continue...</h2>
+      <h2>Loading...</h2>
     </div>
   </div>
 </template>
@@ -178,7 +178,7 @@ export default {
   },
   data() {
     return {
-      hasWeb3: false,
+      inited: false,
       isShowDeposit: false,
       isShowExit: false,
       isShowTransfer: false,
@@ -211,14 +211,7 @@ export default {
       try {
         await pify(EmbarkJS.onReady)();
 
-        await EmbarkJS.Plasma.init(web3);
-
-        this.hasWeb3 =
-          EmbarkJS.Plasma.web3 &&
-          ((EmbarkJS.Plasma.web3.currentProvider &&
-            EmbarkJS.Plasma.web3.currentProvider.isMetaMask) ||
-            (EmbarkJS.Plasma.web3.givenProvider &&
-              EmbarkJS.Plasma.web3.givenProvider.isMetaMask));
+        await EmbarkJS.Plasma.init(web3, false);
 
         const {
           rootChain,
@@ -228,6 +221,7 @@ export default {
         this.rootChain = rootChain;
         this.childChain = childChain;
         this.plasmaContractAddress = plasmaContractAddress;
+        this.inited = true;
 
         this.refresh();
       } catch (err) {
