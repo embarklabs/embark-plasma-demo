@@ -17,8 +17,8 @@ limitations under the License.
   <div id="app">
     <div v-if="inited">
       <md-toolbar class="md-transparent">
-        <img class="logo md-image" src="./assets/status_logo.png">
-        <img class="logo sink md-image" src="./assets/OmiseGO_Logo.svg">
+        <img class="logo md-image" src="./assets/status_logo.png" />
+        <img class="logo sink md-image" src="./assets/OmiseGO_Logo.svg" />
       </md-toolbar>
       <div class="md-layout md-gutter">
         <md-card class="md-layout-item md-size-25 actions">
@@ -120,7 +120,7 @@ limitations under the License.
           </div>
         </md-table>
       </div>
-      <EventLog ref="eventLog"/>
+      <EventLog ref="eventLog" />
 
       <Deposit
         v-if="isShowDeposit"
@@ -167,6 +167,7 @@ import OmgUtil from "@omisego/omg-js-util";
 import EmbarkJS from "./embarkArtifacts/embarkjs";
 import web3 from "./embarkArtifacts/modules/web3";
 import pify from "pify";
+window.EmbarkJS = EmbarkJS;
 
 export default {
   name: "app",
@@ -211,7 +212,7 @@ export default {
       try {
         await pify(EmbarkJS.onReady)();
 
-        await EmbarkJS.Plasma.init(web3, false);
+        await EmbarkJS.Plasma.init();
 
         const {
           rootChain,

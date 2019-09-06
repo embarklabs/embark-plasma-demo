@@ -3387,7 +3387,7 @@ embark-plasma@^1.0.1:
     embarkjs-plasma "1.0.0"
     ethers "4.0.28"
 
-embark-utils@^4.1.0-beta.2, embark-utils@^4.1.0-beta.3:
+embark-utils@^4.1.0-beta.2:
   version "4.1.0-beta.3"
   resolved "https://registry.yarnpkg.com/embark-utils/-/embark-utils-4.1.0-beta.3.tgz#bf243c1d81856ebebf9c646dbb00b53569072bec"
   integrity sha512-Ur/MK7Ypf6IYdjB8+mFZpv2QpyR/tebT1VYoihIziicH2r7WBnNI1Oy2y1EgmZGTPzx2aMKRXxhpvgKlDmoCfg==
@@ -3411,13 +3411,6 @@ embark-utils@^4.1.0-beta.2, embark-utils@^4.1.0-beta.3:
     web3 "1.0.0-beta.37"
     web3-eth "1.0.0-beta.37"
     web3-eth-abi "1.0.0-beta.37"
-
-embarkjs-connector-web3@^4.1.0-beta.2:
-  version "4.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/embarkjs-connector-web3/-/embarkjs-connector-web3-4.1.0-beta.3.tgz#cb7f91623241fa975291d7fccd2cfa0318988ac9"
-  integrity sha512-BaqNMAtL850Zqjq3AmEF1n6s5cfCHqQfcd06/aQe3LNy1ez3U77tzf9LJHtVpnNiF+XM4Sv9geGPTCOpXuVfkw==
-  dependencies:
-    embark-utils "^4.1.0-beta.3"
 
 embarkjs-plasma@1.0.0, embarkjs-plasma@^1.0.0:
   version "1.0.0"

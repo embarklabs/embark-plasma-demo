@@ -23,7 +23,7 @@ limitations under the License.
       <md-table-head>Log</md-table-head>
     </md-table-row>
     <div v-if="logs.length" class="logs">
-      <div v-bind:key="log.message" v-for="log in logs">
+      <div v-bind:key="log.timestamp" v-for="log in logs">
         <md-table-row style="height:100%;">
           <md-table-cell class="log" v-bind:class="log.level">{{ log.message }}</md-table-cell>
         </md-table-row>
@@ -54,10 +54,10 @@ export default {
       this.logs.push(message);
     },
     info(message) {
-      this.log({ message, level: "info" });
+      this.log({ message, level: "info", timestamp: Date.now() });
     },
     error(message) {
-      this.log({ message, level: "error" });
+      this.log({ message, level: "error", timestamp: Date.now() });
     },
     removeLog(log) {
       this.logs = this.logs.filter(item => item !== log);
