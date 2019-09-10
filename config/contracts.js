@@ -4,8 +4,8 @@ module.exports = {
     // order of connections the dapp should connect to
     dappConnection: [
       "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
-      "ws://localhost:8546",
-      "http://localhost:8545"
+      "ws://localhost:8556",
+      "http://localhost:8555"
     ],
 
     // Automatically call `ethereum.enable` if true.
@@ -39,11 +39,11 @@ module.exports = {
   // default environment, merges with the settings in default
   // assumed to be the intended environment by `embark run`
   development: {
-    dappConnection: [
-      "ws://localhost:8546",
-      "http://localhost:8545",
-      "$WEB3"  // uses pre existing web3 object if available (e.g in Mist)
-    ]
+    // dappConnection: [
+    //   "ws://localhost:8556",
+    //   "http://localhost:8555",
+    //   "$WEB3"  // uses pre existing web3 object if available (e.g in Mist)
+    // ]
   },
 
   // merges with the settings in default

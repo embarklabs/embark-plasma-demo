@@ -165,7 +165,6 @@ import Transfer from "./components/Transfer.vue";
 import Exit from "./components/Exit.vue";
 import OmgUtil from "@omisego/omg-js-util";
 import EmbarkJS from "./embarkArtifacts/embarkjs";
-import web3 from "./embarkArtifacts/modules/web3";
 import pify from "pify";
 window.EmbarkJS = EmbarkJS;
 

@@ -25,6 +25,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "embark-plasma": "^1.0.1",
+    "embarkjs": "^4.1.1",
     "vue": "^2.6.10",
     "vue-material": "^1.0.0-beta-11"
   },
